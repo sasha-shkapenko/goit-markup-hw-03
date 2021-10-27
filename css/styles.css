@@ -12,6 +12,26 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
 /* logo */
 .header {
@@ -24,7 +44,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-.container.head {
+.header-container {
   display: flex;
   align-items: center;
 }
@@ -42,13 +62,6 @@ body {
   margin-right: 93px;
 }
 /* site nav */
-.list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-  color: var(--primary-text-color);
-}
 .navigation-bar {
   display: flex;
   align-items: center;
@@ -122,7 +135,7 @@ body {
   display: inline-block;
   width: 200px;
   border-radius: 4px;
-  padding: 16px 32px;
+  padding: 10px 32px;
   text-align: center;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -131,6 +144,8 @@ body {
   color: #ffffff;
   font-family: inherit;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
   text-decoration: none;
   cursor: pointer;
 }
@@ -140,7 +155,7 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.section:nth-child(2n + 1) {
+.team-section {
   background-color: #f5f4fa;
 }
 .section.no-padding {
@@ -155,7 +170,12 @@ body {
   line-height: 1.17;
   text-align: center;
 }
-/* Чем занимаемся */
+/* Особенности */
+.section.features {
+  padding-bottom: 0;
+
+  background-color: #ffffff;
+}
 .features.list {
   display: flex;
 }
@@ -176,23 +196,27 @@ body {
 }
 .features-text {
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
 }
-.pictures.list {
+/* Чем занимаемся */
+.section.we-do {
+  padding-top: 0;
+}
+.pictures-list {
   display: flex;
 }
-.pictures .item {
+.pictures-item {
   width: calc((100%-60px) / 3);
 }
-.pictures .item:not(:last-child) {
+.pictures-item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Team */
-.team.list {
+.team-list {
   display: flex;
 }
-.team .item {
+.team-item {
   width: calc((100%-90px) / 4);
 
   background-color: #ffffff;
@@ -200,11 +224,14 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team .item:not(:last-child) {
+.team-item:not(:last-child) {
   margin-right: 30px;
 }
-.team-title {
+.team-card {
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+.team-title {
   margin-bottom: 10px;
 
   color: var(--titles-text-color);
@@ -213,9 +240,7 @@ body {
   line-height: 1.17;
   text-align: center;
 }
-.section-description {
-  margin-bottom: 30px;
-
+.team-description {
   font-size: 16px;
   line-height: 1.17;
   text-align: center;
@@ -235,36 +260,35 @@ body {
   display: inline-block;
   margin-bottom: 20px;
 }
-.adress {
-  margin-bottom: 8px;
-
+.address-item {
   font-style: normal;
   color: #ffffff;
 }
-.contact.foot {
-  display: inline-block;
-  margin-bottom: 8px;
+.footer .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 /* PORTFOLIO */
 /* Buttons */
-.filter.list {
+.filter-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .filter-button {
   border: none;
   border-radius: 4px;
-  padding: 12px 23px;
+  padding: 6px 22px;
   text-align: center;
-  margin-bottom: 50px;
 
   background-color: #f5f4fa;
   color: var(--titles-text-color);
+  font-size: 16px;
+  line-height: 1.63;
   font-family: inherit;
   text-decoration: none;
   cursor: pointer;
 }
-.filter .item:not(:last-child) {
+.filter-list .item:not(:last-child) {
   margin-right: 8px;
 }
 .filter-button:hover {
@@ -274,25 +298,27 @@ body {
   color: #ffffff;
 }
 /* Projects */
-.projects.list {
+.projects {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; */
 }
-.projects .item {
+.projects-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.projects .item:nth-last-child(-n + 3) {
+.projects-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.projects .item:nth-child(3n) {
+.projects-item:nth-child(3n) {
   margin-right: 0;
 }
-
-.section.no-color {
-  background-color: #ffffff;
+.project-descr {
+  padding: 20px 24px;
+  border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
 }
 .project-title {
   margin-top: 0;
